@@ -1,0 +1,75 @@
+---
+description: Reglas de accesibilidad y UX
+globs:
+  - "src/**/*.html"
+  - "src/**/*.scss"
+  - "src/**/*.ts"
+alwaysApply: true
+---
+
+# ACCESIBILIDAD Y UX
+
+## HTML semántico
+Preferir:
+- header
+- nav
+- main
+- section
+- article
+- footer
+- button
+- a
+
+No utilizar elementos no semánticos para acciones cuando existe un elemento HTML adecuado.
+
+## Navegación por teclado
+Todo elemento interactivo debe poder utilizarse mediante teclado.
+
+Mantener estados:
+- focus-visible
+- hover
+- active
+- disabled
+
+Nunca eliminar el focus sin reemplazarlo por un indicador accesible.
+
+## Contraste
+Mantener suficiente contraste entre:
+- Texto y fondo.
+- Controles y fondo.
+- Elementos interactivos.
+
+## Imágenes
+- Utilizar `alt` descriptivo cuando sea necesario.
+- Las imágenes decorativas deben tratarse como decorativas.
+- Evitar información crítica exclusivamente dentro de imágenes.
+
+## Botones y enlaces
+Usar:
+- `<button>` para acciones.
+- `<a>` para navegación.
+
+No usar `<div>` como botón.
+
+## Movimiento
+Respetar:
+`prefers-reduced-motion: reduce`
+
+Las animaciones no deben impedir:
+- lectura,
+- navegación,
+- interacción.
+
+## Formularios
+- Labels claros.
+- Estados de error comprensibles.
+- Mensajes de validación útiles.
+- Controles accesibles.
+
+## UX
+La estética nunca debe perjudicar:
+- claridad,
+- navegación,
+- legibilidad,
+- rendimiento,
+- accesibilidad.

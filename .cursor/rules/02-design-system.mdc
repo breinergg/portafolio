@@ -1,0 +1,103 @@
+---
+description: Sistema visual y dirección de diseño del portafolio
+alwaysApply: true
+---
+
+# DESIGN SYSTEM
+
+## Objetivo visual
+Crear un portafolio moderno, editorial, tecnológico y profesional.
+
+Debe transmitir:
+- Profesionalismo.
+- Seguridad técnica.
+- Creatividad.
+- Modernidad.
+- Minimalismo.
+- Personalidad.
+
+## Identidad
+La interfaz debe representar a Breiner González Machado.
+
+No utilizar una estética genérica de "portfolio de desarrollador".
+
+La identidad visual debe ser propia y consistente.
+
+## Layout
+Priorizar:
+- Grid.
+- Espacio negativo.
+- Secciones amplias.
+- Jerarquía visual fuerte.
+- Composiciones editoriales.
+- Elementos asimétricos cuando aporten valor.
+- Ritmo visual entre secciones.
+
+No hacer que todas las secciones tengan exactamente la misma estructura.
+
+## Tipografía
+La tipografía es un elemento principal de identidad.
+
+Reglas:
+- Utilizar una familia tipográfica principal.
+- Máximo una familia secundaria si existe una razón clara.
+- Crear jerarquía entre display, headings, body, labels y metadata.
+- Los títulos pueden ser grandes y expresivos.
+- Controlar cuidadosamente line-height y letter-spacing.
+
+## Espaciado
+Crear un sistema coherente de espaciado.
+
+Preferir tokens CSS en lugar de valores arbitrarios repetidos.
+
+Ejemplo conceptual:
+--space-xs
+--space-sm
+--space-md
+--space-lg
+--space-xl
+--space-2xl
+
+## Colores
+No inventar colores nuevos en cada componente.
+
+Centralizar colores en variables/tokens y mantener una paleta coherente.
+
+## Bordes y sombras
+Utilizar bordes y sombras de forma moderada.
+
+Evitar:
+- Sombras excesivas.
+- Cards genéricas.
+- Gradientes sin función.
+- Efectos visuales que reduzcan la legibilidad.
+
+## Componentes
+Los componentes deben compartir lenguaje visual:
+- Botones.
+- Links.
+- Cards.
+- Badges.
+- Inputs.
+- Navegación.
+- Modales.
+- Secciones.
+
+## Animaciones
+Usar animaciones sutiles y con propósito.
+
+Adecuadas para:
+- Entrada de elementos.
+- Scroll reveal.
+- Hover.
+- Microinteracciones.
+- Transiciones de navegación.
+- Feedback visual.
+
+Evitar:
+- Animaciones permanentes innecesarias.
+- Efectos excesivos.
+- Transiciones demasiado lentas.
+- Movimiento que distraiga del contenido.
+
+Respetar `prefers-reduced-motion`.

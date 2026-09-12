@@ -1,0 +1,48 @@
+---
+description: Convenciones y buenas prácticas para Angular
+globs:
+  - "src/**/*.ts"
+  - "src/**/*.html"
+  - "src/**/*.scss"
+alwaysApply: false
+---
+
+# ANGULAR
+
+## Arquitectura
+- Utilizar Angular Standalone Components.
+- Mantener componentes enfocados en una sola responsabilidad.
+- Separar componentes de presentación y lógica compleja cuando aporte valor.
+- Evitar componentes monolíticos.
+- Mantener una estructura de carpetas predecible y escalable.
+
+## TypeScript
+- Usar interfaces y tipos explícitos cuando mejoren la claridad.
+- Evitar `any`.
+- Evitar lógica compleja directamente dentro de templates.
+- Usar nombres semánticos.
+- Evitar métodos con responsabilidades múltiples.
+
+## Templates
+- Mantener templates claros y fáciles de leer.
+- Evitar expresiones excesivamente complejas.
+- Reutilizar componentes cuando exista un patrón repetido.
+- Priorizar semántica HTML correcta.
+
+## Estilos
+- Preferir SCSS organizado y reutilizable.
+- Evitar estilos inline.
+- Evitar selectores excesivamente específicos.
+- No duplicar estilos que puedan convertirse en tokens, mixins o utilidades.
+
+## Componentes
+Cada componente debería tener una responsabilidad clara.
+Antes de crear uno nuevo:
+- Buscar componentes similares.
+- Revisar si la funcionalidad puede reutilizarse.
+- Mantener consistencia en nombres, inputs, outputs y estilos.
+
+## Datos
+- No hardcodear contenido repetido directamente en el template si puede modelarse como datos.
+- Separar datos de presentación cuando sea conveniente.
+- Preparar la arquitectura para futuras integraciones con APIs.

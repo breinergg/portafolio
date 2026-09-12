@@ -1,0 +1,54 @@
+---
+description: Reglas generales del portafolio profesional de Breiner González Machado
+alwaysApply: true
+---
+
+# PORTAFOLIO — REGLAS GENERALES
+
+## Objetivo
+Este proyecto es el portafolio profesional de Breiner González Machado, Ingeniero de Sistemas.
+El objetivo es presentar de forma clara, moderna y profesional su perfil, experiencia, habilidades y proyectos.
+
+La aplicación debe sentirse como un producto digital profesional, no como una plantilla genérica.
+
+## Stack principal
+- Angular
+- TypeScript
+- HTML5
+- SCSS/CSS
+- Angular Standalone Components
+- Componentización y reutilización
+- Responsive design
+- Accesibilidad
+
+## Reglas generales de código
+- Utilizar TypeScript fuertemente tipado.
+- Evitar `any` salvo que exista una razón técnica justificada.
+- Preferir componentes pequeños, cohesivos y reutilizables.
+- Evitar duplicación de código.
+- Mantener nombres descriptivos y consistentes.
+- No crear archivos o componentes innecesarios.
+- No instalar dependencias para resolver problemas que puedan resolverse con capacidades nativas o CSS simple.
+- Antes de crear un componente nuevo, revisar si puede reutilizarse uno existente.
+- No modificar arquitectura existente sin una razón técnica clara.
+- Mantener separación entre presentación, lógica y datos cuando corresponda.
+
+## Calidad
+Antes de finalizar una implementación:
+1. Verificar responsive.
+2. Verificar accesibilidad básica.
+3. Verificar estados hover/focus/active.
+4. Revisar posibles duplicaciones.
+5. Comprobar que los nombres sean consistentes.
+6. Evitar errores de consola.
+7. Mantener coherencia visual con el sistema de diseño.
+
+## Regla de prioridad
+Priorizar en este orden:
+1. Experiencia de usuario.
+2. Accesibilidad.
+3. Mantenibilidad.
+4. Rendimiento.
+5. Estética.
+
+No sacrificar usabilidad por efectos visuales.

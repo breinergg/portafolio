@@ -1,0 +1,62 @@
+---
+description: Reglas responsive para el portafolio
+globs:
+  - "src/**/*.scss"
+  - "src/**/*.html"
+alwaysApply: false
+---
+
+# RESPONSIVE DESIGN
+
+## Objetivo
+La interfaz debe funcionar correctamente en:
+- Mobile.
+- Tablet.
+- Laptop.
+- Desktop.
+
+## Principios
+No limitarse a reducir tamaños.
+
+Cuando sea necesario, replantear:
+- Layout.
+- Orden de elementos.
+- Navegación.
+- Tamaños tipográficos.
+- Espaciado.
+- Animaciones.
+- Interacciones.
+
+## CSS
+Preferir:
+- CSS Grid.
+- Flexbox.
+- Container queries cuando aporten valor.
+- Unidades relativas.
+- `clamp()`.
+- Variables CSS.
+- Breakpoints consistentes.
+
+Evitar:
+- Anchos rígidos innecesarios.
+- Posicionamiento absoluto como solución general.
+- Valores mágicos repetidos.
+- Dependencia exclusiva de breakpoints.
+
+## Mobile
+En pantallas pequeñas:
+- Priorizar contenido.
+- Reducir ruido visual.
+- Mantener CTAs accesibles.
+- Evitar overflow horizontal.
+- Mantener legibilidad.
+- Adaptar navegación.
+
+## Verificación
+Toda sección nueva debe probarse mentalmente y/o visualmente en:
+- 360px aproximadamente.
+- 768px aproximadamente.
+- 1024px aproximadamente.
+- 1440px aproximadamente.
+
+Los valores son referencias, no restricciones absolutas.

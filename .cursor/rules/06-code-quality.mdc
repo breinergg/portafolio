@@ -1,0 +1,68 @@
+---
+description: Calidad, mantenimiento y decisiones técnicas
+alwaysApply: true
+---
+
+# CODE QUALITY
+
+## Antes de implementar
+Analizar primero:
+- Arquitectura existente.
+- Componentes reutilizables.
+- Sistema de estilos.
+- Convenciones del proyecto.
+- Dependencias instaladas.
+
+No comenzar creando archivos innecesarios.
+
+## Principios
+Aplicar:
+- KISS.
+- DRY.
+- Single Responsibility.
+- Composición.
+- Reutilización razonable.
+
+No aplicar patrones complejos solo para "hacerlo más profesional".
+
+## Dependencias
+Antes de añadir una librería:
+1. Verificar si Angular, TypeScript o CSS ya resuelven el problema.
+2. Evaluar tamaño y mantenimiento.
+3. Evaluar impacto en rendimiento.
+4. Mantener dependencias al mínimo razonable.
+
+## Refactorización
+No refactorizar grandes partes del proyecto sin necesidad.
+
+Cuando una modificación sea localizada, mantenerla localizada.
+
+Cuando una mejora arquitectónica sea necesaria, explicar brevemente:
+- problema,
+- solución,
+- impacto.
+
+## Rendimiento
+Priorizar:
+- Imágenes optimizadas.
+- Lazy loading cuando corresponda.
+- Código dividido correctamente.
+- Evitar trabajo innecesario durante render.
+- Animaciones eficientes.
+- Evitar dependencias pesadas sin justificación.
+
+## Proyectos
+Los proyectos del portafolio deben comunicar valor.
+
+No mostrar solamente:
+"Angular + .NET + PostgreSQL"
+
+También explicar:
+- problema,
+- solución,
+- rol,
+- funcionalidades,
+- resultado.
+
+## Regla final
+El código debe ser suficientemente simple para que otro desarrollador pueda entenderlo y mantenerlo.
