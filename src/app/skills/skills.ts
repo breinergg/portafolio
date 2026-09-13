@@ -41,6 +41,32 @@ export class Skills {
     this.select((this.activeIndex() + 1) % this.skills.length);
   }
 
+  protected onWheel(event: WheelEvent): void {
+    // Solo responde a desplazamiento horizontal; el scroll vertical sigue navegando la página.
+    if (Math.abs(event.deltaX) < 8) {
+      return;
+    }
+
+    event.preventDefault();
+    if (event.deltaX > 0) {
+      this.selectNext();
+    } else {
+      this.selectPrevious();
+    }
+  }
+
+  protected onTrackKeydown(event: KeyboardEvent): void {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      this.selectPrevious();
+    }
+
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      this.selectNext();
+    }
+  }
+
   protected distanceFromActive(index: number): number {
     const difference = index - this.activeIndex();
     const wrapped = ((difference + this.skills.length / 2) % this.skills.length) - this.skills.length / 2;
