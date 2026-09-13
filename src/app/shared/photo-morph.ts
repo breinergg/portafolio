@@ -10,16 +10,6 @@ import {
   viewChild,
 } from '@angular/core';
 
-/**
- * Transición tipo "flip-card" ligada al scroll entre la foto del hero y la del about.
- *
- * Una única tarjeta fija interpola posición, tamaño y rotación (rotateY 0→180°)
- * entre las dos figuras ancladas (`[data-flip-anchor]`): la cara frontal es la
- * foto del hero y la trasera la del about, entrelazadas en un solo giro.
- *
- * Mejora progresiva: sin JS o con `prefers-reduced-motion`, cada sección muestra
- * su propia foto estática y esta capa permanece oculta.
- */
 @Component({
   selector: 'app-photo-morph',
   templateUrl: './photo-morph.html',
@@ -102,7 +92,6 @@ export class PhotoMorph implements AfterViewInit, OnDestroy {
     const viewport = window.innerHeight;
     const scrollY = window.scrollY;
 
-    // La transición ocurre mientras la foto viaja de un centro de viewport al otro.
     const heroCenter = scrollY + heroRect.top + heroRect.height / 2;
     const aboutCenter = scrollY + aboutRect.top + aboutRect.height / 2;
     const start = heroCenter - viewport / 2;
