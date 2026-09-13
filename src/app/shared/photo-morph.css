@@ -1,0 +1,36 @@
+:host {
+  display: contents;
+}
+
+/* Oculta por defecto: solo se activa con JS y sin reduce-motion. */
+.morph {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.5s ease;
+  will-change: transform, width, height, top, left;
+}
+
+.morph:not(.is-active) {
+  display: none;
+}
+
+.morph__face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.9rem;
+  object-fit: cover;
+  object-position: center top;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.morph__face--back {
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,59 @@
+import { Component, computed, signal } from '@angular/core';
+import { Reveal } from '../shared/reveal';
+
+interface Skill {
+  readonly name: string;
+  readonly level: 'Básico' | 'Intermedio' | 'Avanzado';
+  readonly icon: string;
+}
+
+const SKILLS: readonly Skill[] = [
+  { name: 'Angular', level: 'Intermedio', icon: '/images/skills/angular.svg' },
+  { name: 'TypeScript', level: 'Intermedio', icon: '/images/skills/typescript.svg' },
+  { name: 'JavaScript', level: 'Intermedio', icon: '/images/skills/javascript.svg' },
+  { name: 'HTML5', level: 'Avanzado', icon: '/images/skills/html5.svg' },
+  { name: 'CSS3', level: 'Intermedio', icon: '/images/skills/css.svg' },
+  { name: 'Git', level: 'Intermedio', icon: '/images/skills/git.svg' },
+  { name: 'PostgreSQL', level: 'Básico', icon: '/images/skills/postgresql.svg' },
+  { name: '.NET', level: 'Básico', icon: '/images/skills/dotnet.svg' },
+];
+
+@Component({
+  selector: 'app-skills',
+  imports: [Reveal],
+  templateUrl: './skills.html',
+  styleUrl: './skills.css',
+})
+export class Skills {
+  protected readonly skills = SKILLS;
+  protected readonly activeIndex = signal(0);
+  protected readonly activeSkill = computed(() => this.skills[this.activeIndex()]);
+
+  protected select(index: number): void {
+    this.activeIndex.set(index);
+  }
+
+  protected selectPrevious(): void {
+    this.select((this.activeIndex() - 1 + this.skills.length) % this.skills.length);
+  }
+
+  protected selectNext(): void {
+    this.select((this.activeIndex() + 1) % this.skills.length);
+  }
+
+  protected distanceFromActive(index: number): number {
+    const difference = index - this.activeIndex();
+    const wrapped = ((difference + this.skills.length / 2) % this.skills.length) - this.skills.length / 2;
+    return Math.round(wrapped);
+  }
+
+  protected itemState(index: number): 'is-active' | 'is-neighbor' | 'is-distant' {
+    const distance = Math.abs(this.distanceFromActive(index));
+
+    if (distance === 0) {
+      return 'is-active';
+    }
+
+    return distance === 1 ? 'is-neighbor' : 'is-distant';
+  }
+}

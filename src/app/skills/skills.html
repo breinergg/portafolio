@@ -1,0 +1,57 @@
+<section id="habilidades" class="skills" aria-labelledby="skills-title">
+  <div class="skills__container">
+    <div class="skills__heading" appReveal>
+      <p class="skills__eyebrow">(Habilidades)</p>
+      <h2 id="skills-title" class="skills__title">Mi stack<span aria-hidden="true">.</span></h2>
+    </div>
+
+    <div class="skills__carousel" appReveal>
+      <button
+        class="skills__control"
+        type="button"
+        aria-label="Tecnología anterior"
+        (click)="selectPrevious()"
+      >
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path d="m12.5 4-6 6 6 6" />
+        </svg>
+      </button>
+
+      <div class="skills__track" aria-label="Tecnologías">
+        @for (skill of skills; track skill.name; let index = $index) {
+          <button
+            class="skills__item"
+            type="button"
+            [class]="itemState(index)"
+            [style.--skill-distance]="distanceFromActive(index)"
+            [attr.aria-current]="index === activeIndex() ? 'true' : null"
+            [attr.aria-label]="skill.name + ', nivel ' + skill.level"
+            (mouseenter)="select(index)"
+            (focus)="select(index)"
+            (click)="select(index)"
+          >
+            <img [src]="skill.icon" [alt]="skill.name" width="92" height="92" loading="lazy" decoding="async" />
+            <span>{{ skill.name }}</span>
+          </button>
+        }
+      </div>
+
+      <button
+        class="skills__control"
+        type="button"
+        aria-label="Siguiente tecnología"
+        (click)="selectNext()"
+      >
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path d="m7.5 4 6 6-6 6" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="skills__detail" appReveal aria-live="polite">
+      <p class="skills__detail-label">Nivel actual</p>
+      <p class="skills__detail-value">{{ activeSkill().level }}</p>
+      <p class="skills__detail-name">{{ activeSkill().name }}</p>
+    </div>
+  </div>
+</section>

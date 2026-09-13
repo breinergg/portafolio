@@ -86,6 +86,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Deja espacio para el header fijo al navegar por anclas. */
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -97,7 +102,10 @@ body {
   font-size: var(--text-body);
   line-height: var(--leading-normal);
   color: var(--color-text-primary);
+  /* Lienzo de puntos compartido por todas las secciones. */
   background-color: var(--color-bg-primary);
+  background-image: radial-gradient(rgba(19, 19, 19, 0.11) 0.6px, transparent 0.6px);
+  background-size: 6px 6px;
   min-height: 100dvh;
 }
 

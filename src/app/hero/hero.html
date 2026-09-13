@@ -1,53 +1,21 @@
 <section id="inicio" class="hero" aria-labelledby="hero-title">
   <div class="hero__container">
-    <header class="hero__header" [class.hero__header--open]="isMenuOpen()">
-      <div class="hero__header-bar">
-        <a class="hero__brand" href="#inicio" (click)="closeMenu()">Breiner</a>
-
-        <button
-          type="button"
-          class="hero__menu-trigger"
-          [attr.aria-expanded]="isMenuOpen()"
-          aria-controls="hero-navigation"
-          [attr.aria-label]="isMenuOpen() ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'"
-          (click)="toggleMenu()"
-        >
-          @if (isMenuOpen()) {
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M2.5 2.5L11.5 11.5M11.5 2.5L2.5 11.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          } @else {
-            <svg width="16" height="4" viewBox="0 0 16 4" fill="currentColor" aria-hidden="true">
-              <circle cx="2" cy="2" r="1.6"/>
-              <circle cx="8" cy="2" r="1.6"/>
-              <circle cx="14" cy="2" r="1.6"/>
-            </svg>
-          }
-        </button>
-      </div>
-
-      <div class="hero__header-panel">
-        <nav
-          id="hero-navigation"
-          class="hero__navigation"
-          aria-label="Navegación principal"
-          [attr.inert]="isMenuOpen() ? null : ''"
-        >
-          <a href="#sobre-mi" (click)="closeMenu()"><span>Sobre mí</span></a>
-          <a href="#proyectos" (click)="closeMenu()"><span>Proyectos</span></a>
-          <a href="#contacto" (click)="closeMenu()"><span>Contacto</span></a>
-        </nav>
-      </div>
-    </header>
-
     <h1 id="hero-title" class="hero__title">
       <span class="hero__title-line">Ingeniero</span>
       <span class="hero__title-line">de sistemas<span class="hero__dot" aria-hidden="true">.</span></span>
     </h1>
 
-    <div class="hero__portrait-frame" aria-hidden="true">
-      <span class="hero__portrait-frame-mark"></span>
-    </div>
+    <figure class="hero__portrait-frame" data-flip-anchor="hero">
+      <img
+        class="hero__portrait-image"
+        src="/images/hero/heroimg.webp"
+        alt="Breiner González Machado"
+        width="520"
+        height="743"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </figure>
 
     <div class="hero__footer">
       <p class="hero__copyright" aria-label="Copyright 2026">
