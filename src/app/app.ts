@@ -6,9 +6,10 @@ import { About } from './about/about';
 import { PhotoMorph } from './shared/photo-morph';
 import { Skills } from './skills/skills';
 import { Projects } from './projects/projects';
+import { Contact } from './contact/contact';
 
 @Component({
-  imports: [RouterOutlet, Header, Hero, About, Skills, Projects, PhotoMorph],
+  imports: [RouterOutlet, Header, Hero, About, Skills, Projects, Contact, PhotoMorph],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

@@ -1,0 +1,50 @@
+<section id="contacto" class="contact" aria-labelledby="contact-title">
+  <div class="contact__container">
+    <div class="contact__intro" appReveal>
+      <p class="contact__eyebrow">(Contacto)</p>
+      <h2 id="contact-title" class="contact__title">Hablemos<span aria-hidden="true">.</span></h2>
+      <p class="contact__message">
+        ¿Tienes una idea, un proyecto o una oportunidad? Conversemos y encontremos la mejor forma de llevarla a cabo.
+      </p>
+
+      <nav class="contact__socials" aria-label="Perfiles de Breiner">
+        <a [href]="socialLinks.whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Breiner">
+          <img src="/images/social/whatsapp.svg" alt="" width="20" height="20" />
+        </a>
+        <a [href]="socialLinks.linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Breiner">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.45 3H3.55A.55.55 0 0 0 3 3.55v16.9c0 .3.25.55.55.55h16.9c.3 0 .55-.25.55-.55V3.55c0-.3-.25-.55-.55-.55ZM8.35 18.45H5.7V9.9h2.65v8.55ZM7.03 8.73a1.54 1.54 0 1 1 0-3.08 1.54 1.54 0 0 1 0 3.08Zm11.42 9.72H15.8v-4.16c0-.99-.02-2.26-1.38-2.26-1.38 0-1.59 1.08-1.59 2.19v4.23h-2.65V9.9h2.54v1.17h.04c.35-.67 1.22-1.38 2.5-1.38 2.67 0 3.16 1.76 3.16 4.05v4.71Z" />
+          </svg>
+        </a>
+        <a [href]="socialLinks.github" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Breiner">
+          <img src="/images/social/github.svg" alt="" width="20" height="20" />
+        </a>
+      </nav>
+    </div>
+
+    <form class="contact__form" appReveal (submit)="prepareEmail($event)">
+      <div class="contact__field">
+        <label for="contact-name">Nombre</label>
+        <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required />
+      </div>
+
+      <div class="contact__field">
+        <label for="contact-email">Correo electrónico</label>
+        <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required />
+      </div>
+
+      <div class="contact__field">
+        <label for="contact-message">Cuéntame sobre tu proyecto</label>
+        <textarea id="contact-message" name="message" rows="5" placeholder="¿En qué puedo ayudarte?" required></textarea>
+      </div>
+
+      <button class="contact__submit" type="submit">
+        Preparar correo
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M3 10h13M11 4l6 6-6 6" />
+        </svg>
+      </button>
+      <p class="contact__form-note">Se abrirá tu cliente de correo con el mensaje listo para enviar.</p>
+    </form>
+  </div>
+</section>
