@@ -95,6 +95,11 @@ section[id] {
   html {
     scroll-behavior: auto;
   }
+
+  h1:hover .title-dot,
+  h2:hover .title-dot {
+    animation: none;
+  }
 }
 
 body {
@@ -136,6 +141,38 @@ ol {
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
+}
+
+.title-dot {
+  display: inline-block;
+  transform-origin: center 78%;
+}
+
+h1:hover .title-dot,
+h2:hover .title-dot {
+  animation: title-dot-ball 680ms var(--ease-smooth) both;
+}
+
+@keyframes title-dot-ball {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  24% {
+    transform: translateY(-0.38em) scale(0.78, 1.22);
+  }
+
+  48% {
+    transform: translateY(0) scale(1.18, 0.8);
+  }
+
+  68% {
+    transform: translateY(-0.14em) scale(0.92, 1.08);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
 
 ::selection {

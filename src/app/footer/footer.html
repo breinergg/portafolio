@@ -1,8 +1,13 @@
 <footer class="site-footer" aria-labelledby="footer-title">
   <div class="site-footer__container">
     <section class="site-footer__statement">
-      <p class="site-footer__eyebrow">(Breiner González Machado)</p>
-      <h2 id="footer-title">Tecnología con propósito,<br />soluciones que avanzan.</h2>
+      <p class="site-footer__eyebrow">(Breiner Gonzalez Machado)</p>
+      <h2 id="footer-title" class="site-footer__visually-hidden">Portafolio de Breiner Gonzalez Machado</h2>
+      <div class="site-footer__shapes" aria-hidden="true">
+        <span class="site-footer__shape site-footer__shape--circle"></span>
+        <span class="site-footer__shape site-footer__shape--square"></span>
+        <span class="site-footer__shape site-footer__shape--diamond"></span>
+      </div>
     </section>
 
     <nav class="site-footer__links" aria-label="Enlaces del sitio">
@@ -23,10 +28,10 @@
     </section>
 
     <div class="site-footer__bottom">
-      <p>© 2026 Breiner González Machado. Todos los derechos reservados.</p>
+      <p>© 2026 Breiner Gonzalez Machado. Todos los derechos reservados.</p>
       <a href="#inicio" aria-label="Volver al inicio">Volver arriba <span aria-hidden="true">↗</span></a>
     </div>
 
-    <p class="site-footer__monogram" aria-hidden="true">BGM</p>
+    <p class="site-footer__monogram" appReveal [once]="false" aria-hidden="true">BGM</p>
   </div>
 </footer>

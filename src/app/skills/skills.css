@@ -167,9 +167,9 @@
 }
 
 .skills__detail {
-  display: grid;
-  grid-template-columns: auto auto 1fr;
+  display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: var(--space-sm);
   width: fit-content;
   margin: clamp(3rem, 7vw, 6rem) auto 0;
@@ -222,11 +222,13 @@
   }
 
   .skills__detail {
-    grid-template-columns: auto auto;
+    flex-wrap: wrap;
+    max-width: 22rem;
   }
 
   .skills__detail-name {
-    grid-column: 1 / -1;
+    flex-basis: 100%;
+    text-align: center;
   }
 }
 

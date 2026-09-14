@@ -24,6 +24,8 @@ export class Reveal implements OnInit, OnDestroy {
 
   /** Proporción visible del elemento para disparar la animación. */
   readonly threshold = input(0.25);
+  /** Si es falso, repite la animación cada vez que el elemento entra al viewport. */
+  readonly once = input(true);
 
   ngOnInit(): void {
     const element = this.host.nativeElement;
@@ -43,7 +45,11 @@ export class Reveal implements OnInit, OnDestroy {
         for (const entry of entries) {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
+            if (this.once()) {
+              observer.unobserve(entry.target);
+            }
+          } else if (!this.once()) {
+            entry.target.classList.remove('is-visible');
           }
         }
       },

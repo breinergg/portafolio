@@ -99,22 +99,40 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
+  width: fit-content;
   margin-top: var(--space-sm);
+  padding: 0.7rem 1rem;
   color: var(--color-text-primary);
   font-weight: 600;
-  transition: color var(--transition-fast);
+  border: 1px solid var(--color-text-primary);
+  border-radius: var(--radius-full);
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
 }
 
 .about__cta svg {
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-base);
 }
 
 .about__cta:hover {
-  color: var(--color-accent);
+  color: var(--color-bg-primary);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0.65rem 1.5rem rgba(92, 70, 232, 0.24);
+  transform: translateY(-0.2rem);
 }
 
 .about__cta:hover svg {
   transform: translateX(0.25rem);
+}
+
+.about__cta:active {
+  box-shadow: none;
+  transform: translateY(0) scale(0.97);
 }
 
 /* Reveal de textos (la foto usa su propio flip). */
