@@ -97,7 +97,8 @@ section[id] {
   }
 
   .title-dot:hover,
-  .title-dot:active {
+  .title-dot:active,
+  .is-visible .section-title {
     animation: none;
   }
 }
@@ -151,6 +152,23 @@ ol {
 .title-dot:hover,
 .title-dot:active {
   animation: title-dot-ball 720ms var(--ease-smooth) both;
+}
+
+.is-visible .section-title {
+  transform-origin: left bottom;
+  animation: section-title-in 850ms var(--ease-smooth) both;
+}
+
+@keyframes section-title-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.42em) skewY(2deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+  }
 }
 
 @keyframes title-dot-ball {

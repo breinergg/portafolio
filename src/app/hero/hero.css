@@ -59,7 +59,7 @@
 
 .hero__portrait-frame {
   position: absolute;
-  top: var(--hero-portrait-top);
+  top: var(--hero-portrait-mobile-top, var(--hero-portrait-top));
   bottom: var(--hero-portrait-bottom);
   left: 50%;
   width: var(--hero-portrait-width);
@@ -168,6 +168,24 @@
   transform: scale(0.58);
 }
 
+.hero__bird:nth-child(4) {
+  --flight-x: -4.4rem;
+  --flight-y: -2.75rem;
+
+  right: 2.3rem;
+  bottom: 0.1rem;
+  transform: scale(0.48);
+}
+
+.hero__bird:nth-child(5) {
+  --flight-x: -5.1rem;
+  --flight-y: -1.7rem;
+
+  right: 1.55rem;
+  bottom: 1.65rem;
+  transform: scale(0.42);
+}
+
 .hero__motto:hover .hero__bird {
   animation: hero-bird-flight 1s var(--ease-smooth) both;
 }
@@ -178,6 +196,14 @@
 
 .hero__motto:hover .hero__bird:nth-child(3) {
   animation-delay: 160ms;
+}
+
+.hero__motto:hover .hero__bird:nth-child(4) {
+  animation-delay: 220ms;
+}
+
+.hero__motto:hover .hero__bird:nth-child(5) {
+  animation-delay: 280ms;
 }
 
 @keyframes hero-bird-flight {
@@ -224,7 +250,8 @@
 
   .hero {
     --hero-portrait-width: clamp(6rem, 20vw, 8rem);
-    --hero-portrait-top: 55%;
+    /* Fallback; TS lo sustituye por el final real del título + 4px. */
+    --hero-portrait-top: var(--hero-portrait-mobile-top, 61%);
     --hero-portrait-bottom: var(--space-xl);
   }
 

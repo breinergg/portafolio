@@ -10,14 +10,10 @@ const EMAIL_ADDRESS = 'breinerftwyts@gmail.com';
   styleUrl: './contact.css',
 })
 export class Contact {
-  /**
-   * Sustituye estas URLs por los perfiles reales antes de publicar.
-   * WhatsApp requiere el número internacional sin espacios ni símbolo +.
-   */
   protected readonly socialLinks = {
-    whatsapp: 'https://wa.me/XXXXXXXXXX',
-    linkedin: 'https://www.linkedin.com/in/TU-USUARIO',
-    github: 'https://github.com/TU-USUARIO',
+    whatsapp: 'https://wa.me/573205061555?text=Hola%2C+vi+tu+portafolio+y+me+gustar%C3%ADa+hablar+contigo.&utm_source=chatgpt.com',
+    linkedin: 'https://www.linkedin.com/in/breiner-gonzalez-machado-3a5961276',
+    github: 'https://github.com/breinergg',
   };
 
   protected prepareEmail(event: SubmitEvent): void {

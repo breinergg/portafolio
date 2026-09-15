@@ -67,7 +67,10 @@
   overflow: hidden;
   border-radius: 1rem;
   background: var(--color-bg-secondary);
-  transition: transform 600ms var(--ease-smooth);
+  box-shadow: 0 0 0 0 transparent;
+  transition:
+    transform 600ms var(--ease-smooth),
+    box-shadow 450ms var(--ease-smooth);
 }
 
 .project--inventory .project__preview,
@@ -85,6 +88,7 @@
 }
 
 .project:hover .project__preview {
+  box-shadow: 0 0 0 3px var(--color-accent);
   transform: translateY(-0.5rem);
 }
 
