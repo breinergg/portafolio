@@ -96,8 +96,8 @@ section[id] {
     scroll-behavior: auto;
   }
 
-  h1:hover .title-dot,
-  h2:hover .title-dot {
+  .title-dot:hover,
+  .title-dot:active {
     animation: none;
   }
 }
@@ -148,9 +148,9 @@ ol {
   transform-origin: center 78%;
 }
 
-h1:hover .title-dot,
-h2:hover .title-dot {
-  animation: title-dot-ball 680ms var(--ease-smooth) both;
+.title-dot:hover,
+.title-dot:active {
+  animation: title-dot-ball 720ms var(--ease-smooth) both;
 }
 
 @keyframes title-dot-ball {
@@ -158,16 +158,16 @@ h2:hover .title-dot {
     transform: translateY(0) scale(1);
   }
 
-  24% {
-    transform: translateY(-0.38em) scale(0.78, 1.22);
+  30% {
+    transform: translateY(-0.26em) scale(0.9, 1.1);
   }
 
-  48% {
-    transform: translateY(0) scale(1.18, 0.8);
+  54% {
+    transform: translateY(0) scale(1.08, 0.93);
   }
 
-  68% {
-    transform: translateY(-0.14em) scale(0.92, 1.08);
+  74% {
+    transform: translateY(-0.08em) scale(0.98, 1.02);
   }
 
   100% {

@@ -62,15 +62,34 @@
 
 .project__preview {
   position: relative;
-  aspect-ratio: 1.34;
+  /* Las capturas de proyectos son panorámicas (1280 × 600). */
+  aspect-ratio: 1280 / 600;
   overflow: hidden;
   border-radius: 1rem;
   background: var(--color-bg-secondary);
   transition: transform 600ms var(--ease-smooth);
 }
 
+.project--inventory .project__preview,
+.project--analytics .project__preview {
+  padding: 0;
+  background: var(--color-bg-secondary);
+}
+
+.project__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 800ms var(--ease-smooth);
+}
+
 .project:hover .project__preview {
   transform: translateY(-0.5rem);
+}
+
+.project:hover .project__image {
+  transform: scale(1.04);
 }
 
 .project__meta {
@@ -332,6 +351,13 @@
 .analytics-preview__graph i:nth-child(4) { height: 81%; }
 .analytics-preview__graph i:nth-child(5) { height: 55%; }
 .analytics-preview__graph i:nth-child(6) { height: 95%; }
+
+/* Los previews actuales usan capturas reales de los proyectos. */
+.project--inventory .project__preview,
+.project--analytics .project__preview {
+  padding: 0;
+  background: var(--color-bg-secondary);
+}
 
 /* La sección entra en capas al dejar atrás Habilidades. */
 .projects__heading,

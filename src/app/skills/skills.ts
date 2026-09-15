@@ -3,7 +3,7 @@ import { Reveal } from '../shared/reveal';
 
 interface Skill {
   readonly name: string;
-  readonly level: 'Básico' | 'Intermedio' | 'Avanzado';
+  readonly level: 'Básico' | 'Intermedio' | 'Intermedio avanzado' | 'Avanzado';
   readonly icon: string;
 }
 
@@ -13,9 +13,12 @@ const SKILLS: readonly Skill[] = [
   { name: 'JavaScript', level: 'Intermedio', icon: '/images/skills/javascript.svg' },
   { name: 'HTML5', level: 'Avanzado', icon: '/images/skills/html5.svg' },
   { name: 'CSS3', level: 'Intermedio', icon: '/images/skills/css.svg' },
-  { name: 'Git', level: 'Intermedio', icon: '/images/skills/git.svg' },
+  { name: 'Flutter', level: 'Intermedio', icon: '/images/skills/flutter.svg' },
+  { name: 'Spring Boot', level: 'Intermedio', icon: '/images/skills/springboot.svg' },
+  { name: 'Java', level: 'Intermedio', icon: '/images/skills/openjdk.svg' },
+  { name: 'Git', level: 'Básico', icon: '/images/skills/git.svg' },
   { name: 'PostgreSQL', level: 'Básico', icon: '/images/skills/postgresql.svg' },
-  { name: '.NET', level: 'Básico', icon: '/images/skills/dotnet.svg' },
+  { name: '.NET', level: 'Intermedio avanzado', icon: '/images/skills/dotnet.svg' },
 ];
 
 @Component({
